@@ -8,7 +8,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "pack": "ncc build src/index.js --license licenses.txt"
+    "pack": "ncc build src/index.js --license licenses.txt",
+    "build": "ncc build"
   },
   "dependencies": {
     "@actions/core": "^1.6.0",
