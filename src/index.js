@@ -44,7 +44,7 @@ async function setup() {
   await exec('minikube config set cpus 2');
   await exec('minikube config set EmbedCerts true');
 
-  await exec('kn quickstart minikube --install-serving', { input: Buffer.from('\n\n') });
+  await exec('kn quickstart minikube --install-serving', undefined, { input: Buffer.from('\n\n') });
 }
 
 try {
