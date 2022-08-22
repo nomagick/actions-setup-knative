@@ -43,12 +43,12 @@ async function setup() {
 
   await exec('minikube config set cpus 2');
   await exec('minikube config set EmbedCerts true');
-  
-  await exec('kn quickstart minikube --install-serving');
+
+  await exec('kn quickstart minikube --install-serving', { input: Buffer.from('\n\n') });
 }
 
 try {
   setup()
-} catch(e) {
+} catch (e) {
   setFailed(e);
 }
